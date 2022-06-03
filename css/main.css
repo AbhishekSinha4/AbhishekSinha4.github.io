@@ -1,16 +1,87 @@
-div{
-	border-radius: 50%;
-	overflow: hidden;
-	height: 300px;
-	max-width: 400px;
+*{
+	padding: 0;
+	margin: 0;
+}
+div#cover{
+	width: 100%;
+	height: 100vh;
 	margin: 0 auto;
-	text-align: center;
-	
+	padding: 0;
+	background: teal;
+	position: fixed;
+	/*z-index: 100;*/
 }
-div img{
-	height: 400px;
-	max-width: 400px;
-	display: inline-block;
+#leftPane{
+	height: 100%;
+	width: 50%;
+	background: teal;
+	float: left;
 	position: relative;
-	bottom: 0;
+	/*display: inline-block;*/
+	text-align: center;
 }
+#leftPane img{
+	height: 100%;
+	display: inline;
+}
+#rightPane{
+	height: 100%;
+	width: 50%;
+	background: teal;
+	float: left;
+	position: relative;
+	/*display: inline-block;*/
+}
+.paneContent{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+div#content-box{
+	/*margin-top:100%;*/
+	position: absolute;
+	top: 100%;
+	background: #f3f3f3;
+	width: 100%;
+	height: 100vh;
+}
+#content-box nav{
+	display: block;
+	background: teal;
+	height: 40px;
+	text-align: center;
+	border: black solid;
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+}
+#content-box nav ul{
+	display: inline-block;
+}
+#content-box nav ul li{
+	float: left;
+	list-style: none;
+	/*background: blue;*/
+	height: 40px;
+	/*padding: px 0px;*/
+	/*vertical-align: middle;*/
+	padding: 10px;
+	box-sizing: border-box;
+}
+#content-box nav ul li:hover{
+	background: #f3f3f3;
+}
+#content-box #content{
+	padding: 2% 10%;
+}
+#content-box #content #description{
+	font-size: 1.3em;
+}
+#content-box #content .page{
+	display: none;
+}
+#content-box #content .page.active{
+	display: block;
+}
+
