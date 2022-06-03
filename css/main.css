@@ -1,0 +1,16 @@
+div{
+	border-radius: 50%;
+	overflow: hidden;
+	height: 300px;
+	max-width: 400px;
+	margin: 0 auto;
+	text-align: center;
+	
+}
+div img{
+	height: 400px;
+	max-width: 400px;
+	display: inline-block;
+	position: relative;
+	bottom: 0;
+}
