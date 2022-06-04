@@ -2,19 +2,22 @@
 	padding: 0;
 	margin: 0;
 }
+body{
+	font-family: Calibri;
+}
 div#cover{
 	width: 100%;
 	height: 100vh;
 	margin: 0 auto;
 	padding: 0;
-	background: teal;
+	background: #d6e4e8;
 	position: fixed;
 	/*z-index: 100;*/
 }
 #leftPane{
 	height: 100%;
 	width: 50%;
-	background: teal;
+	background: #d6e4e8;
 	float: left;
 	position: relative;
 	/*display: inline-block;*/
@@ -27,7 +30,7 @@ div#cover{
 #rightPane{
 	height: 100%;
 	width: 50%;
-	background: teal;
+	background: #d6e4e8;
 	float: left;
 	position: relative;
 	/*display: inline-block;*/
@@ -43,13 +46,22 @@ div#content-box{
 	/*margin-top:100%;*/
 	position: absolute;
 	top: 100%;
-	background: #f3f3f3;
+	background: #fff;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + #content {
+  margin-top: 40px;
 }
 #content-box nav{
 	display: block;
-	background: teal;
+	background: #d6e4e8;
 	height: 40px;
 	text-align: center;
 	border: black solid;
@@ -70,7 +82,7 @@ div#content-box{
 	box-sizing: border-box;
 }
 #content-box nav ul li:hover{
-	background: #f3f3f3;
+	background: #fff;
 }
 #content-box #content{
 	padding: 2% 10%;
@@ -80,6 +92,9 @@ div#content-box{
 }
 #content-box #content .page{
 	display: none;
+}
+#content-box .tab.active{
+	background: #fff;
 }
 #content-box #content .page.active{
 	display: block;
@@ -92,14 +107,14 @@ div#content-box{
 		height: 100vh;
 		margin: 0 auto;
 		padding: 0;
-		background: teal;
+		background: #d6e4e8;
 		position: fixed;
 		/*z-index: 100;*/
 	}
 	#leftPane{
 		height: 100%;
 		width: 100%;
-		background: teal;
+		background: #d6e4e8;
 		/*float: left;*/
 		position: relative;
 		display: inline-block;
@@ -112,8 +127,8 @@ div#content-box{
 	#rightPane{
 		height: 50%;
 		width: 50%;
-		background: rgba(0,128,128,0.3);
-		/*background: teal;*/
+		background: rgba(184,228,232,0.3);
+		/*background: #d6e4e8;*/
 		/*float: left;*/
 		position: absolute;
 		top: 50%;
@@ -121,4 +136,45 @@ div#content-box{
 		transform: translate(-50%,-50%);
 		/*display: inline-block;*/
 	}
+}
+
+div.tile{
+	height: 400px;
+	box-shadow: 10px 10px 10px 10px darkgray;
+	border: 1px solid black;
+	margin: 40px;
+	padding: 20px;
+	text-align: center;
+	background: #d6e4e8;
+
+}
+/*div.tile .half{
+	width: 50%;
+}*/
+div.tile .half img{
+	height: 400px;
+}
+
+div.tile .half:nth-child(odd){
+	box-sizing: border-box;
+	padding: 20px;
+	width: 70%;
+	height: inherit;
+	background: white;
+
+}
+div.tile .half h4{
+	margin: 20px;
+	margin-bottom: 30px;
+}
+div.tile .half:nth-child(even){
+	width: 30%;
+}
+
+div.tile:nth-child(odd) .half{
+	float: left;
+}
+
+div.tile:nth-child(even) .half{
+	float: right;
 }
