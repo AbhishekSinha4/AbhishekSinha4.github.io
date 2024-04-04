@@ -21,7 +21,7 @@ body.body{
 }
 
 
-div.container{
+div.container-fluid{
 	/*width: 100%;*/
 	/*margin: 0;*/
 	/*text-shadow: 1px 1px 1px #bf510d, -1px -1px 1px #bf510d, 1px -1px 1px #bf510d, -1px 1px 1px #bf510d;*/
@@ -50,6 +50,10 @@ div#row-1 #name{
 div#row-1 #nav{
 	background: var(--bg);
 }
+
+nav.navbar{
+	padding:0;
+}
 nav ul{
 	display: inline-block;
 	margin: 0;
@@ -65,6 +69,7 @@ nav ul li{
 	/*vertical-align: middle;*/
 	padding: 25px;
 	box-sizing: border-box;
+	font-size: 0.7em;
 }
 nav ul li.valid:hover{
 	background: var(--border);
@@ -242,15 +247,58 @@ div#row-4 p{
 	/*z-index: -10;*/
 }
 
+div#row-4 p a, div#row-4 p a:visited, div#row-4 p a:link{
+	color: var(--border);
+}
+
 
 @media (max-width: 767.98px) {
 
   div#row-1{
   	position: fixed;
   	z-index:50;
+  	width:100%;
   }
+  div#row-1 #nav{
+  	position: relative;
+  	background: var(--border);
+  	margin: 0;
+  	padding: 0;
+  }
+  div#row-1 #nav div{
+  	/*position: static;*/
+  }
+  div#row-1 #nav button#toggle{
+  	/*position: absolute;*/
+  	top: 100%;
+  	left: 50%;
+  	height: 35px;
+  	background: var(--bg);
+  	padding: 15px;
+  	margin: 20px auto;
+  }
+  div#row-1 #nav button#toggle span.navbar-toggler-icon#tog-icon{
+  	position: absolute;
+  	top: 50%
+  	left: 50%;
+  	transform: translate(-50%,-50%);
+  	stroke: var(--border);
+  }
+
+  nav ul li{
+  	display: none;
+
+  }
+  nav ul li.valid{
+  	display: block;
+  	width: 100%;
+  	margin: 0;
+	/*background: */
+  }
+
+
   div#row-2 .tile#pp{
-  	margin-top: 180px;
+  	margin-top: 75px;
   }
   div#row-2 .tile.empty{
   	display: none;
