@@ -14,22 +14,27 @@
 </head>
 <body class="body">
 <div class="container-fluid">
-	<div class="row" id="row-1">
-		<div class="tile col-md-2" id="name"><p>Abhishek Sinha</p></div>
-		<div class="tile col-md-9" id="nav">
-			<nav>
-				<ul>
-					<li class="tab" id="tab-0"></li>
-					<li class="tab valid" id="tab-1">About</li>
-					<li class="tab valid" id="tab-2">Edu</li>
-					<li class="tab valid" id="tab-3">Work</li>
-					<li class="tab valid" id="tab-4">Projects</li>
-					<li class="tab valid" id="tab-5">Blog</li>
-					<li class="tab" id="tab-6"></li>
-				</ul>
+<div class="row" id="row-1">
+		<div class="tile col-md-2 col-8 order-md-1 order-2" id="name"><p>Abhishek Sinha</p></div>
+		<div class="tile col-md-9 col-2 order-md-2 order-1" id="nav">
+			<nav class="navbar navbar-expand-md">
+				<button id = "toggle" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      				<span class="navbar-toggler-icon" id="tog-icon"></span>
+    			</button>
+    			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="tab" id="tab-0"></li>
+						<li class="tab valid" id="tab-1">About</li>
+						<li class="tab valid" id="tab-2">Edu</li>
+						<li class="tab valid" id="tab-3">Work</li>
+						<li class="tab valid" id="tab-4">Projects</li>
+						<li class="tab valid" id="tab-5">Blog</li>
+						<li class="tab" id="tab-6"></li>
+					</ul>
+				</div>
 			</nav>
 		</div>
-		<div class="tile col-md-1" id="mode">
+		<div class="tile col-md-1 col-2 order-md-3 order-3" id="mode">
 			<p>
 				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 20 20">
 				  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
@@ -83,7 +88,7 @@
 </div>
 	<div class="row" id="row-4">
 		<div class="tile col-md-12">
-			<p>linkedin.com/in/abhishekdsinha</p>
+			<p><a href="linkedin.com/in/abhishekdsinha">linkedin.com/in/abhishekdsinha</a></p>
 		</div>
 	</div>
 <!-- <div id="cover">
@@ -346,5 +351,44 @@ Blog
 Contact Me
 
  <script type="text/javascript" src="js/main.js"></script> -->
+<div class="container-fluid" style="margin:0, padding:0">
+ 	
+</div>
+ <!-- <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+ </nav> -->
 </body>
 </html>
