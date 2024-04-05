@@ -329,23 +329,57 @@ div#row-3 .tile .post{
 	border: 1px solid black;
 	box-shadow:  2px 2px 3px #444;
 }
-
+div#row-3 .tile .post .post-fold-container{
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	bottom:0;
+	left:0;
+	/*background: rgba(0,255,0,0.5);*/
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	overflow: hidden;
+}
+div#row-3 .tile .post .post-fold-container .post-fold{
+	height: 145%;
+	width: 145%;
+	position: absolute;
+	/*background: rgba(0,0,255,0.5);*/
+	/*border-left: 1px solid black;*/
+	transform: rotateZ(-45deg) translate(45%, -28%);
+}
 div#row-3 .tile .post#post-1{
 	background: #f1f58f;
 	/*border: 1px solid yellow;*/
 }
+div#row-3 .tile .post#post-1 .post-fold{
+	background: #e2e686;
+}
+
 div#row-3 .tile .post#post-2{
 	background: #ffa930;
 	/*border: 1px solid orange;*/
 }
+div#row-3 .tile .post#post-2 .post-fold{
+	background: #de9125;
+}
+
 div#row-3 .tile .post#post-3{
 	background: #a9edf1;
 	/*border: 1px solid blue;*/
 }
+div#row-3 .tile .post#post-3 .post-fold{
+	background: #7ebec2;
+}
+
 div#row-3 .tile .post#post-4{
 	background: #74ed4b;
 	/*border: 1px solid green;*/
 }
+div#row-3 .tile .post#post-4 .post-fold{
+	background: #59bc37;
+}
+
 
 .post .post-text.cedarville-cursive-regular {
   font-family: "Cedarville Cursive", cursive;
