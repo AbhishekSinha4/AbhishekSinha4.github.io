@@ -1,6 +1,6 @@
 :root {
-  --bg: #ffde59;
-  --border: #ff914d;
+  --bg: white;/*#ffde59;*/
+  --border: #284283; /*#00c5ff;*/ /*#ff914d;*/
   --text: #ff914d;
 }
 
@@ -12,8 +12,8 @@
 body.body{
 	font-family:  Jazz LET !important;
 	
-	background: var(--bg); 
-	/*background-image: url("../images/bg.jpeg");*/
+	/*background: var(--bg); */
+	background-image: url("../images/checks.jpg");
 	background-size: contain;
 	/*background-attachment: */
 	color: var(--text);
@@ -49,6 +49,7 @@ div#row-1 #name{
 
 div#row-1 #nav{
 	background: var(--bg);
+	color: #284283;
 }
 
 nav.navbar{
@@ -62,19 +63,35 @@ nav ul{
 nav ul li{
 	float: left;
 	list-style: none;
-	/*background: blue;*/
 	height: 75px;
 	width: 14%;
-	/*padding: px 0px;*/
-	/*vertical-align: middle;*/
 	padding: 25px;
 	box-sizing: border-box;
 	font-size: 0.7em;
 }
 nav ul li.valid:hover{
-	background: var(--border);
-	color: var(--bg);
-	text-decoration: underline;
+	/*background: var(--border);*/
+	/*color: #284283;*/
+	/*text-decoration: underline;*/
+	/*animation: 10s;*/
+}
+nav ul li.valid .tab-text{
+	/*transition: background 1s linear;*/
+	padding: 2px 15px;
+	background: linear-gradient(to left, rgba(255,255,255,0) 50%, #00c5ff 40%, #00ddff 10%) right;
+    background-size: 200%;
+    transition: .2s ease-out;
+    border-left: 3px solid white;
+	border-radius: 50% 0 2px 2px;
+}
+nav ul li.valid:hover .tab-text{
+	/*background: #00c5ff;*/
+	background-position: left;
+	border-left: 3px solid #0075af;
+	/*border-radius: 50% 0 2px 2px;*/
+/*	color: #284283;/*var(--bg);*/
+/*	text-decoration: underline;
+	animation: 10s;*/
 }
 
 
@@ -167,7 +184,7 @@ div#row-2 .tile div.img-outline{
 	box-sizing: content-box;
 	border-radius: 50%;
 	/*overflow: hidden;*/
-	background: rgba(255,145,77,0.7);
+	background: rgba(255,255,255,0.5);
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -213,9 +230,27 @@ div#row-3 .tile .post{
 	top: 0%;
 	left: 50%;
 	transform: translateX(-50%);
-	color: var(--bg);
+	color: #284283;
 	text-shadow: none;
-	box-shadow: 1px 1px 1px #aa8900, 3px 3px 3px #aa8900;
+	border: 1px solid black;
+	box-shadow:  2px 2px 3px #444;
+}
+
+div#row-3 .tile .post#post-1{
+	background: #f1f58f;
+	/*border: 1px solid yellow;*/
+}
+div#row-3 .tile .post#post-2{
+	background: #ffa930;
+	/*border: 1px solid orange;*/
+}
+div#row-3 .tile .post#post-3{
+	background: #a9edf1;
+	/*border: 1px solid blue;*/
+}
+div#row-3 .tile .post#post-4{
+	background: #74ed4b;
+	/*border: 1px solid green;*/
 }
 
 .post .post-text.cedarville-cursive-regular {
@@ -233,6 +268,7 @@ div#row-3 .tile .post{
 div#row-4{
 	margin:0;
 	padding:0;
+	background: white;
 }
 div#row-4 p{
 	/*position: fixed;*/
