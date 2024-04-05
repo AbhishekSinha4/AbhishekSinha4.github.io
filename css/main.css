@@ -1,7 +1,7 @@
 :root {
-  --bg: white;/*#ffde59;*/
+  --bg: rgba(255,255,255,0.5);/*#ffde59;*/
   --border: #284283; /*#00c5ff;*/ /*#ff914d;*/
-  --text: #ff914d;
+  --text: #284283;/*#ff914d;*/
 }
 
 
@@ -13,7 +13,7 @@ body.body{
 	font-family:  Jazz LET !important;
 	
 	/*background: var(--bg); */
-	background-image: url("../images/checks.jpg");
+	background-image: url("../images/wall.jpg");
 	background-size: contain;
 	/*background-attachment: */
 	color: var(--text);
@@ -35,13 +35,13 @@ div.container-fluid{
 
 div#row-1{
 	/*box-shadow: 1px 1px 5px var(--border);*/
-	box-shadow: 1px 1px 1px #aa8900, 3px 3px 10px #aa8900;
+	box-shadow: 1px 1px 1px #444, 3px 3px 10px #444;
 	/*background: rgba(0,0,0,0.2);*/
 }
 
 
 div#row-1 #name{
-	color: var(--bg);
+	color: white;
 	background: var(--border);
 	font-weight: 900;
 	font-size: 1.5em;
@@ -79,9 +79,9 @@ nav ul li.valid .tab-text{
 	/*transition: background 1s linear;*/
 	padding: 2px 15px;
 	background: linear-gradient(to left, rgba(255,255,255,0) 50%, #00c5ff 40%, #00ddff 10%) right;
-    background-size: 200%;
-    transition: .2s ease-out;
-    border-left: 3px solid white;
+    background-size: 210%;
+    transition: .3s ease-out;
+    border-left: 3px solid rgba(255,255,255,0);
 	border-radius: 50% 0 2px 2px;
 }
 nav ul li.valid:hover .tab-text{
@@ -125,14 +125,102 @@ div#row-1 .tile p{
 	margin:0;
 }
 
+
+
+
+
 div#row-2 .tile{
 	height: 350px;
 	text-align: left;
 	position: relative;
 }
+div#row-2 .tile div.spiral{
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
+div#row-2 .tile div.spiral-loop::before{
+	content: " ";
+	height: 40px;
+	width: 100%;
+	display: inline-block;
+	border-radius:50%;
+	border-left: 3px solid #000;
+	/*border-right: 1px solid #000;*/
+	/*border-top: 1px solid #000;*/
+	/*transform: rotateZ(-45deg);*/
+	position: absolute;
+	/*top: 25px;*/
+	/*border-l: 3px solid #bbb;*/
+	/*outline-top: 1px solid black;*/
+	margin-right: 10px;
+	z-index: 20;
+	/*background: r;*/
+}
+div#row-2 .tile .spiral-loop{
+	height: 40px;
+	width: 5%;
+	display: inline-block;
+	/*background: red;*/
+	/*border-radius:50%;*/
+	/*border-left: 1px solid #000;*/
+	/*border-right: 3px solid #000;*/
+	/*border-top: 3px solid #000;*/
+	/*transform: rotateZ(-45deg);*/
+	position: relative;
+	float: left;
+	transform: translateY(-50%);
+	/*border-l: 3px solid #bbb;*/
+	/*outline-top: 1px solid black;*/
+	margin-left: 2%;
+	margin-right:2%;
+	/*z-index: 50;*/
+	/*background: r;*/
+}
+div#row-2 .tile .spiral-loop .hole-container{
+	height: 40px;
+	width: 120%;
+	position: absolute;
+	top: 50%;
+	background: #ede29e;
+	z-index: 10;
+}
+div#row-2 .tile .spiral-loop .hole{
+	border-radius: 50%;
+	height: 10px;
+	width: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	background: #000;
+}
+
+div#row-2 .tile .spiral-loop::after{
+	content : " ";
+	height: 40px;
+	width: 100%;
+	display: inline-block;
+	border-radius:50%;
+	/*border-left: 1px solid #000;*/
+	border-right: 3px solid #000;
+	border-top: 3px solid #000;
+	/*transform: rotateZ(-45deg);*/
+	position: absolute;
+	top: 0;
+	left: 10%;
+	/*transform: translateY(-50%);*/
+	/*border-l: 3px solid #bbb;*/
+	/*outline-top: 1px solid black;*/
+	/*margin-right: 10px;*/
+	/*z-index: 0;*/
+	/*background: r;*/
+}
+
 div#row-2 .tile h1{
-	-webkit-text-stroke-width: 1px;
-  	-webkit-text-stroke-color: black;
+	/*-webkit-text-stroke-width: 1px;*/
+  	/*-webkit-text-stroke-color: black;*/
+  	z-index: 10;
 	background: #ede29e;
 	padding: 10px;
 	margin: 0;
@@ -143,7 +231,7 @@ div#row-2 .tile h1{
 	transform: translate(-50%,-50%);
 	width: 85%;
 	font-weight: 700;
-	box-shadow: 1px 1px 1px #aa8900, 3px 3px 10px #aa8900;
+	box-shadow: 1px 1px 1px #444, 3px 3px 10px #444;
 	/*font-style: italic;*/
 }
 div#row-2 .tile h1 hr{
@@ -155,24 +243,30 @@ div#row-2 .tile h1 hr{
 div#hi{
 	font-size: 1.7em;
 	font-style: normal;
+	position: relative;
+	top: 18px;
 
 }
 div#welcome{
 	font-size: 1em;
 	font-weight: 400;
 	font-style: normal;
-
+	position: relative;
+	top: 10px;
 }
 div#tomy{
 	font-size: 1em;
 	font-weight: 400;
 	font-style: normal;
+	position: relative;
+	top: 10px;
 
 }
 div#digitalhome{
 	font-size: 1.1em;
 	font-style: normal;
-
+	position: relative;
+	top: 10px;
 }
 
 div#row-2 .tile div.img-outline{
@@ -184,7 +278,7 @@ div#row-2 .tile div.img-outline{
 	box-sizing: content-box;
 	border-radius: 50%;
 	/*overflow: hidden;*/
-	background: rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.9);
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -268,7 +362,7 @@ div#row-3 .tile .post#post-4{
 div#row-4{
 	margin:0;
 	padding:0;
-	background: white;
+	background: var(--bg);
 }
 div#row-4 p{
 	/*position: fixed;*/
@@ -277,7 +371,7 @@ div#row-4 p{
 	width: 100%;
 	padding: 20px;
 	left: 0%;
-	box-shadow: 1px 1px 1px #aa8900, 3px 3px 10px #aa8900;
+	box-shadow: 1px 1px 1px #444, 3px 3px 10px #444;
 	border-top: 1px solid var(--border);
 	margin:0;
 	/*z-index: -10;*/
