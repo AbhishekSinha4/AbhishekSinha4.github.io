@@ -1,5 +1,5 @@
 :root {
-  --bg: rgba(255,255,255,0.5);/*#ffde59;*/
+  --bg: rgba(255,255,255,0.7);/*#ffde59;*/
   --border: #284283; /*#00c5ff;*/ /*#ff914d;*/
   --text: #284283;/*#ff914d;*/
 }
@@ -37,12 +37,16 @@ div#row-1{
 	/*box-shadow: 1px 1px 5px var(--border);*/
 	box-shadow: 1px 1px 1px #444, 3px 3px 10px #444;
 	/*background: rgba(0,0,0,0.2);*/
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 100;
 }
 
 
 div#row-1 #name{
 	color: white;
-	background: var(--border);
+	background: rgba(40,66,131,0.9);
 	font-weight: 900;
 	font-size: 1.5em;
 } 
@@ -97,8 +101,8 @@ nav ul li.valid:hover .tab-text{
 
 
 div#row-1 #mode{
-	color: var(--bg);
-	background: var(--border);
+	color: white;
+	background: rgba(40,66,131,0.9);
 }
 
 div#row-1 #mode svg path{
@@ -128,8 +132,12 @@ div#row-1 .tile p{
 
 
 
+div#row-2{
+	margin-top: 75px;
+}
 
 div#row-2 .tile{
+
 	height: 350px;
 	text-align: left;
 	position: relative;
@@ -223,6 +231,7 @@ div#row-2 .tile h1{
   	z-index: 10;
 	background: #ede29e;
 	padding: 10px;
+	padding-bottom: 30px;
 	margin: 0;
 	border-radius: 0 0 5px 5px;
 	position: absolute;
@@ -241,10 +250,10 @@ div#row-2 .tile h1 hr{
 }
 
 div#hi{
-	font-size: 1.7em;
+	font-size: 1.3em;
 	font-style: normal;
 	position: relative;
-	top: 18px;
+	top: 14px;
 
 }
 div#welcome{
@@ -396,19 +405,20 @@ div#row-3 .tile .post#post-4 .post-fold{
 div#row-4{
 	margin:0;
 	padding:0;
-	background: var(--bg);
+	
 }
 div#row-4 p{
-	/*position: fixed;*/
-	/*bottom: 0%;*/
+	position: fixed;
+	bottom: 0%;
 	text-align: center;
 	width: 100%;
 	padding: 20px;
 	left: 0%;
 	box-shadow: 1px 1px 1px #444, 3px 3px 10px #444;
 	border-top: 1px solid var(--border);
+	background: var(--bg);
 	margin:0;
-	/*z-index: -10;*/
+	z-index: 100;
 }
 
 div#row-4 p a, div#row-4 p a:visited, div#row-4 p a:link{
@@ -423,9 +433,22 @@ div#row-4 p a, div#row-4 p a:visited, div#row-4 p a:link{
   	z-index:50;
   	width:100%;
   }
+  div#row-1 .tile#name{
+  	background: var(--bg);
+  	color: rgb(40,66,131);
+  }
+   div#row-1 .tile#mode{
+  	background: var(--bg);
+  	color: rgb(40,66,131);
+  }
+  div#row-1 #mode svg path{
+	stroke: rgb(40,66,131);
+	stroke-width: 1px;
+}
   div#row-1 #nav{
   	position: relative;
-  	background: var(--border);
+  	background: var(--bg);
+  	color: rgb(40,66,131);
   	margin: 0;
   	padding: 0;
   }
@@ -437,7 +460,7 @@ div#row-4 p a, div#row-4 p a:visited, div#row-4 p a:link{
   	top: 100%;
   	left: 50%;
   	height: 35px;
-  	background: var(--bg);
+  	background: white;
   	padding: 15px;
   	margin: 20px auto;
   }
@@ -457,19 +480,35 @@ div#row-4 p a, div#row-4 p a:visited, div#row-4 p a:link{
   	display: block;
   	width: 100%;
   	margin: 0;
-	/*background: */
+	background: var(--bg); 
   }
 
 
   div#row-2 .tile#pp{
-  	margin-top: 75px;
+  	height: 250px;
+  }
+  div#row-2 .tile div.img-outline{
+  	top: 60%;
+  	/*bottom: 0%;*/
   }
   div#row-2 .tile.empty{
   	display: none;
   }
-  div#row2 .tile{
+  div#row-2 .tile{
   	height: 300px;
   }
+  div#row2 .tile{
+  	top: 0%;
+  }
 
+
+  div#row-4{
+  	margin-top: 20px;
+  }
+  div#row-4 p{
+  	position: fixed;
+	bottom: 0%;
+	z-index: 100;
+  }
 
 }
