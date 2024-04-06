@@ -10,7 +10,7 @@
 	margin: 0;
 }
 body.body{
-	font-family:  Jazz LET !important;
+	font-family:  Jazz LET;
 	
 	/*background: var(--bg); */
 	background-image: url("../images/wall.jpg");
@@ -190,7 +190,7 @@ div#row-2 .tile .spiral-loop .hole-container{
 	width: 120%;
 	position: absolute;
 	top: 50%;
-	background: #ede29e;
+	background: #ebe4b9; /*#ede29e;*/
 	z-index: 10;
 }
 div#row-2 .tile .spiral-loop .hole{
@@ -229,7 +229,7 @@ div#row-2 .tile h1{
 	/*-webkit-text-stroke-width: 1px;*/
   	/*-webkit-text-stroke-color: black;*/
   	z-index: 10;
-	background: #ede29e;
+	background: #ebe4b9; /*#ede29e;*/
 	padding: 10px;
 	padding-bottom: 30px;
 	margin: 0;
@@ -240,42 +240,51 @@ div#row-2 .tile h1{
 	transform: translate(-50%,-50%);
 	width: 85%;
 	font-weight: 700;
+	border: 1px solid black;
 	box-shadow: 1px 1px 1px #444, 3px 3px 10px #444;
-	/*font-style: italic;*/
 }
+
 div#row-2 .tile h1 hr{
 	margin:0;
 	border-top: 1.5px solid #3ea7f8;
+	opacity: 0.6;
+	margin-top: 15px;
 
+}
+
+.nanum-brush-script-regular {
+  font-family: "Nanum Brush Script", cursive;
 }
 
 div#hi{
-	font-size: 1.3em;
+	font-size: 0.7em;
 	font-style: normal;
 	position: relative;
-	top: 14px;
+	top: 21px;
 
 }
 div#welcome{
-	font-size: 1em;
+	font-size: 0.6em;
 	font-weight: 400;
 	font-style: normal;
 	position: relative;
-	top: 10px;
+	top: 21px;
 }
 div#tomy{
-	font-size: 1em;
+	font-size: 0.6em;
 	font-weight: 400;
 	font-style: normal;
 	position: relative;
-	top: 10px;
+	top: 21px;
+	height: 25px;
 
 }
 div#digitalhome{
-	font-size: 1.1em;
+	font-size: 0.7em;
 	font-style: normal;
 	position: relative;
-	top: 10px;
+	top: 21px;
+	height: 25px;
 }
 
 div#row-2 .tile div.img-outline{
@@ -358,35 +367,35 @@ div#row-3 .tile .post .post-fold-container .post-fold{
 	transform: rotateZ(-45deg) translate(45%, -28%);
 }
 div#row-3 .tile .post#post-1{
-	background: #f1f58f;
+	background: #d9f4fc; 
 	/*border: 1px solid yellow;*/
 }
 div#row-3 .tile .post#post-1 .post-fold{
-	background: #e2e686;
+	background: #a3cfeb; /*#85acc5;*/
 }
 
 div#row-3 .tile .post#post-2{
-	background: #ffa930;
+	background: rgb(169,237,241);/*#bdd3da;*/ /*#85acc5;*/
 	/*border: 1px solid orange;*/
 }
 div#row-3 .tile .post#post-2 .post-fold{
-	background: #de9125;
+	background: #80caee; /*#de9125;*/
 }
 
 div#row-3 .tile .post#post-3{
-	background: #a9edf1;
+	background: #d9f4fc; /*#7ca3b3;*/
 	/*border: 1px solid blue;*/
 }
 div#row-3 .tile .post#post-3 .post-fold{
-	background: #7ebec2;
+	background: #a3cfeb; /*#70afd5;*/
 }
 
 div#row-3 .tile .post#post-4{
-	background: #74ed4b;
+	background: rgb(169,237,241); /*#70afd5;*/
 	/*border: 1px solid green;*/
 }
 div#row-3 .tile .post#post-4 .post-fold{
-	background: #59bc37;
+	background: #80caee; /*#59bc37;*/
 }
 
 
@@ -398,7 +407,6 @@ div#row-3 .tile .post#post-4 .post-fold{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  transform: rotateX(-45deg)
   font-style: normal;
 }
 
