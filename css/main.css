@@ -329,12 +329,12 @@ div#row-2 .tile img{
 
 
 div#row-3 .tile{
-	height: 300px;
+	height: 350px;
 	text-align: center;
 	position: relative;
 }
 div#row-3 .tile .post{
-	background: var(--border);
+	/*background: var(--border);*/
 	width: 80%;
 	/*margin-top: 10%;*/
 	height: 80%;
@@ -346,7 +346,30 @@ div#row-3 .tile .post{
 	text-shadow: none;
 	border: 1px solid black;
 	box-shadow:  2px 2px 3px #444;
+	overflow: hidden;
 }
+
+
+
+div#row-3 .tile #post-1 .post-shade, div#row-3 .tile #post-3 .post-shade{
+	position: absolute;
+	top: 0%;
+	left:0%;
+	width: 100%;
+	height: 30px;
+	background: linear-gradient(#c0e6ff, #d9f4fc)
+	/*#a3cfeb;*/
+}
+div#row-3 .tile #post-2 .post-shade, div#row-3 .tile #post-4 .post-shade{
+	position: absolute;
+	top: 0%;
+	left:0%;
+	width: 100%;
+	height: 30px;
+	background: linear-gradient(#9dd3ed, rgb(169,237,241))
+	/*#a3cfeb;*/
+}
+
 div#row-3 .tile .post .post-fold-container{
 	height: 15px;
 	width: 15px;
@@ -356,25 +379,68 @@ div#row-3 .tile .post .post-fold-container{
 	/*background: rgba(0,255,0,0.5);*/
 	border-top: 1px solid black;
 	border-right: 1px solid black;
+	background: #d9f4fc;
 	overflow: hidden;
+	transition: height 0.3s ease-out, width 0.3s ease-out;
+	transition-delay: 0.2s;
 }
 div#row-3 .tile .post .post-fold-container .post-fold{
-	height: 145%;
-	width: 145%;
+	height: 800px;
+	width: 800px;
 	position: absolute;
 	/*background: rgba(0,0,255,0.5);*/
 	/*border-left: 1px solid black;*/
-	transform: rotateZ(-45deg) translate(45%, -28%);
+	transform: rotateZ(45deg) translate(-50%, -50%);
+	transition: transform 0.2s linear;
+	transition-delay: 0s;
 }
-div#row-3 .tile .post#post-1{
+
+div#row-3 .tile .post:hover .post-fold-container{
+	height: 100%;
+	width:100%;
+	transition-delay: 0s;
+
+}
+div#row-3 .tile .post:hover .post-fold{
+	transform: translate(-50%, -150%); 
+	transition-delay: 0.3s;
+	border: 1px solid black;
+}
+
+/*div#row-3 .tile .post::before{
+	z-index: 5;
+	content: " ";
+	background: var(--border);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 100%;
+	right: 100%;
+	transform: translate(15px,-15px);
+	color: #284283;
+	text-shadow: none;
+	border: 1px solid black;
+	box-shadow:  2px 2px 3px #444;
+	transition: top 0.5s ease-out, right 0.5s ease-out;
+}*/
+/*div#row-3 .tile .post:hover .post-fold{
+	top: 0%;
+	right: 0%;
+	color: #284283;
+	text-shadow: none;
+	border: 1px solid black;
+	box-shadow:  2px 2px 3px #444;
+}*/
+
+div#row-3 .tile .post#post-1, div#row-3 .tile .post#post-1 .post-fold-container{
 	background: #d9f4fc; 
 	/*border: 1px solid yellow;*/
 }
-div#row-3 .tile .post#post-1 .post-fold{
+div#row-3 .tile .post#post-1 .post-fold {
 	background: #a3cfeb; /*#85acc5;*/
 }
 
-div#row-3 .tile .post#post-2{
+div#row-3 .tile .post#post-2, div#row-3 .tile .post#post-2 .post-fold-container{
 	background: rgb(169,237,241);/*#bdd3da;*/ /*#85acc5;*/
 	/*border: 1px solid orange;*/
 }
@@ -382,7 +448,7 @@ div#row-3 .tile .post#post-2 .post-fold{
 	background: #80caee; /*#de9125;*/
 }
 
-div#row-3 .tile .post#post-3{
+div#row-3 .tile .post#post-3, div#row-3 .tile .post#post-3 .post-fold-container{
 	background: #d9f4fc; /*#7ca3b3;*/
 	/*border: 1px solid blue;*/
 }
@@ -390,7 +456,7 @@ div#row-3 .tile .post#post-3 .post-fold{
 	background: #a3cfeb; /*#70afd5;*/
 }
 
-div#row-3 .tile .post#post-4{
+div#row-3 .tile .post#post-4, div#row-3 .tile .post#post-4 .post-fold-container{
 	background: rgb(169,237,241); /*#70afd5;*/
 	/*border: 1px solid green;*/
 }
