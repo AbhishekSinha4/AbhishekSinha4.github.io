@@ -50,6 +50,16 @@ div#row-1 #name{
 	font-weight: 900;
 	font-size: 1.5em;
 } 
+div#row-1 #name a{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	text-decoration: none;
+	color: white;
+	/*background: rgba(40,66,131,0.9);
+	font-weight: 900;
+	font-size: 1.5em;*/
+} 
 
 div#row-1 #nav{
 	background: var(--bg);
@@ -69,7 +79,7 @@ nav ul li{
 	list-style: none;
 	height: 75px;
 	width: 14%;
-	padding: 25px;
+	/*padding: 25px;*/
 	box-sizing: border-box;
 	font-size: 0.7em;
 }
@@ -87,6 +97,14 @@ nav ul li.valid .tab-text{
     transition: .3s ease-out;
     border-left: 3px solid rgba(255,255,255,0);
 	border-radius: 50% 0 2px 2px;
+}
+nav ul li.valid a{
+	width: 100%;
+	height: 100%;
+	padding: 25px;
+	display: inline-block;
+	text-decoration: none;
+	color: var(--text);
 }
 nav ul li.valid:hover .tab-text{
 	/*background: #00c5ff;*/
@@ -225,7 +243,7 @@ div#row-2 .tile .spiral-loop::after{
 	/*background: r;*/
 }
 
-div#row-2 .tile h1{
+div#row-2 .tile h1#note{
 	/*-webkit-text-stroke-width: 1px;*/
   	/*-webkit-text-stroke-color: black;*/
   	z-index: 10;
@@ -244,7 +262,7 @@ div#row-2 .tile h1{
 	box-shadow: 1px 1px 1px #444, 3px 3px 10px #444;
 }
 
-div#row-2 .tile h1 hr{
+div#row-2 .tile h1#note hr{
 	margin:0;
 	border-top: 1.5px solid #3ea7f8;
 	opacity: 0.6;
@@ -509,6 +527,9 @@ div#row-4 p a, div#row-4 p a:visited, div#row-4 p a:link{
   }
   div#row-1 .tile#name{
   	background: var(--bg);
+  	color: rgb(40,66,131);
+  }
+  div#row-1 #name a{
   	color: rgb(40,66,131);
   }
    div#row-1 .tile#mode{
