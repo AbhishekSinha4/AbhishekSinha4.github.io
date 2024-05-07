@@ -1,10 +1,12 @@
 document.querySelector(".cities .box").addEventListener("scroll",function(){
+	console.log("hi")
 	walk()
 	chooseText()
 })
-document.querySelector(".cities .box").addEventListener("scrollend",function(){
-	stop()
-})
+// document.querySelector(".cities .box").addEventListener("scrollend",function(){
+// 	console.log("hello")
+// 	stop()
+// })
 
 var lastVisible = "#about-section-1"
 
@@ -50,12 +52,20 @@ function chooseText(){
 		document.querySelector(".visible").style.opacity = opacityValue
 	} else{
 		document.querySelector(".visible").style.opacity = 1
-	}
-	
-	// console.log(scroll, itemScroll, img, lastVisible)
-
-
-
-
-	
+	}	
 }
+
+var isScrolling;
+window.addEventListener("mousewheel",function(e){
+	console.log(e.deltaY)
+	document.querySelector(".cities .box").scrollTop += e.deltaY
+	window.clearTimeout( isScrolling );
+	isScrolling = setTimeout(function() {
+
+		// Run the callback
+		stop()
+		console.log( 'Scrolling has stopped.' );
+
+	}, 66);
+	// walk()
+})
